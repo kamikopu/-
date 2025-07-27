@@ -1,0 +1,38 @@
+.slider-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 打字机光标效果 */
+#slider-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-size: 24px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  /* 保证光标闪烁 */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* 光标闪烁关键帧 */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
